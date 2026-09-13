@@ -25,20 +25,20 @@ class AppDimens extends ThemeExtension<AppDimens> {
   });
 
   const AppDimens.standard()
-      : space1 = 4,
-        space2 = 8,
-        space3 = 12,
-        space4 = 16,
-        space5 = 20,
-        space6 = 24,
-        radiusSm = 4,
-        radiusMd = 8,
-        radiusLg = 12,
-        borderHairline = 1,
-        iconSm = 16,
-        iconMd = 20,
-        rowMinHeight = 56,
-        tabBarHeight = 56;
+    : space1 = 4,
+      space2 = 8,
+      space3 = 12,
+      space4 = 16,
+      space5 = 20,
+      space6 = 24,
+      radiusSm = 4,
+      radiusMd = 8,
+      radiusLg = 12,
+      borderHairline = 1,
+      iconSm = 16,
+      iconMd = 20,
+      rowMinHeight = 56,
+      tabBarHeight = 56;
 
   final double space1;
   final double space2;
