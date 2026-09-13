@@ -12,8 +12,8 @@ class StockMeta {
   factory StockMeta.fromJson(Map json) {
     return StockMeta(
       symbolCode: json['symbolCode'] ?? '',
-      stockName: json['stockName'] ?? '', // 종목명[cite: 1]
-      exchangeName: json['stockExchangeNameKor'] ?? '', // 거래소명[cite: 1]
+      stockName: json['stockName'] ?? '',
+      exchangeName: json['stockExchangeNameKor'] ?? '',
     );
   }
 }

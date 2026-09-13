@@ -3,28 +3,41 @@ class NowPrice {
   final int currentPrice;
   final int previousClose;
   final int listedStockCount;
+  final int openPrice;
+  final int highPrice;
+  final int lowPrice;
+  final int volume;
 
   NowPrice({
     required this.symbol,
     required this.currentPrice,
     required this.previousClose,
     required this.listedStockCount,
+    this.openPrice = 0,
+    this.highPrice = 0,
+    this.lowPrice = 0,
+    this.volume = 0,
   });
 
-  factory NowPrice.fromJson(Map json) {
+  factory NowPrice.fromJson(Map<String, dynamic> json) {
     return NowPrice(
-      symbol: json['cd'] ?? '',
-      currentPrice: json['nv'] ?? 0,
-      previousClose: json['pcv'] ?? 0,
-      listedStockCount: json['countOfListedStock'] ?? 0,
+      symbol: json['cd'] as String? ?? '',
+      currentPrice: (json['nv'] as num?)?.toInt() ?? 0,
+      previousClose: (json['pcv'] as num?)?.toInt() ?? 0,
+      listedStockCount: (json['countOfListedStock'] as num?)?.toInt() ?? 0,
+      openPrice: (json['ov'] as num?)?.toInt() ?? 0,
+      highPrice: (json['hv'] as num?)?.toInt() ?? 0,
+      lowPrice: (json['lv'] as num?)?.toInt() ?? 0,
+      volume: (json['aq'] as num?)?.toInt() ?? 0,
     );
   }
-  // 등락액 = 현재가 - 전일종가
-  int get changeAmount => currentPrice - previousClose; 
-  
-  // 등락률 = 등락액 / 전일종가
-  double get changeRate => previousClose == 0 ? 0.0 : (currentPrice - previousClose) / previousClose; 
-  
-  // 시가총액 = 현재가 * 상장주식수
+
+  int get changeAmount => currentPrice - previousClose;
+
+  double get changeRate {
+    if (previousClose == 0) return 0;
+    return changeAmount / previousClose;
+  }
+
   int get marketCap => currentPrice * listedStockCount;
 }
