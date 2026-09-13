@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screen/main_screen.dart';
 
+import 'screen/main_screen.dart';
 import 'theme/theme.dart';
 
 void main() {
@@ -21,9 +21,7 @@ class EdencrewAssignmentApp extends StatelessWidget {
   }
 }
 
-/// 과제 시작점입니다. 이 화면은 지우고 직접 구현한 화면으로 바꿔 주세요.
-///
-/// 디자인 토큰을 어떻게 꺼내 쓰는지 보여주는 예시이기도 합니다.
+/// 디자인 토큰 사용 예제 화면.
 class StartHereScreen extends StatelessWidget {
   const StartHereScreen({super.key});
 

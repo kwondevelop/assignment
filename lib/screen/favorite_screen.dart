@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import '../data/stock_api.dart';
 
+import '../data/stock_api.dart';
 import '../model/now_price.dart';
 import '../model/stock_meta.dart';
+import '../state/favorite_store.dart';
 import '../theme/theme.dart';
 
 enum SortType { price, changeRate, name }
 
 class FavoriteScreen extends StatefulWidget {
-  const FavoriteScreen({super.key});
+  const FavoriteScreen({super.key, required this.favoriteStore});
+
+  final FavoriteStore favoriteStore;
 
   @override
   State<FavoriteScreen> createState() => _FavoriteScreenState();
@@ -17,22 +20,44 @@ class FavoriteScreen extends StatefulWidget {
 class _FavoriteScreenState extends State<FavoriteScreen> {
   SortType _sortType = SortType.price;
 
-  // 목록과 정렬 확인용 임시 관심종목입니다.
-  final List<StockMeta> _favorites = [
-    StockMeta(symbolCode: '005930', stockName: '삼성전자', exchangeName: '코스피'),
-    StockMeta(symbolCode: '000660', stockName: 'SK하이닉스', exchangeName: '코스피'),
-  ];
+  List<StockMeta> get _favorites => widget.favoriteStore.stocks;
 
   final StockApi _stockApi = StockApi();
 
   final Map<String, NowPrice> _quotes = {};
   String? _loadError;
   bool _isLoading = false;
+  bool _refreshPending = false;
 
   @override
   void initState() {
     super.initState();
+
+    widget.favoriteStore.addListener(_onFavoritesChanged);
     _refreshQuotes();
+  }
+
+  void _onFavoritesChanged() {
+    setState(() {
+      final symbols = _favorites.map((stock) => stock.symbolCode).toSet();
+
+      // 관심 해제한 종목의 시세를 제거합니다.
+      _quotes.removeWhere((symbol, quote) => !symbols.contains(symbol));
+
+      _loadError = null;
+    });
+
+    if (_isLoading) {
+      _refreshPending = true;
+    } else {
+      _refreshQuotes();
+    }
+  }
+
+  @override
+  void dispose() {
+    widget.favoriteStore.removeListener(_onFavoritesChanged);
+    super.dispose();
   }
 
   Future<void> _refreshQuotes() async {
@@ -53,9 +78,21 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
 
       setState(() {
         // 응답에서 빠진 종목은 기존 시세를 유지합니다.
-        _quotes.addAll(quotes);
+        final currentSymbols = _favorites
+            .map((stock) => stock.symbolCode)
+            .toSet();
 
-        if (symbols.any((symbol) => !quotes.containsKey(symbol))) {
+        // 조회 도중 관심 해제한 종목은 다시 추가하지 않습니다.
+        for (final entry in quotes.entries) {
+          if (currentSymbols.contains(entry.key)) {
+            _quotes[entry.key] = entry.value;
+          }
+        }
+
+        if (symbols.any(
+          (symbol) =>
+              currentSymbols.contains(symbol) && !quotes.containsKey(symbol),
+        )) {
           _loadError = '일부 종목의 시세를 받지 못했습니다. 다시 시도해 주세요.';
         }
       });
@@ -73,6 +110,12 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
         setState(() {
           _isLoading = false;
         });
+
+        // 조회 중 목록이 변경됐으면 최신 목록으로 다시 조회합니다.
+        if (_refreshPending) {
+          _refreshPending = false;
+          _refreshQuotes();
+        }
       }
     }
   }
