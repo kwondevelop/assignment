@@ -1,0 +1,132 @@
+{
+    "resultCode": "success",
+    "result": {
+        "pollingInterval": 70000,
+        "areas": [
+            {
+                "name": "SERVICE_ITEM",
+                "datas": [
+                    {
+                        "cd": "005930",
+                        "nm": "삼성전자",
+                        "sv": 269000,
+                        "nv": 259500,
+                        "cv": 9500,
+                        "cr": 3.53,
+                        "rf": "5",
+                        "mt": "1",
+                        "ms": "CLOSE",
+                        "tyn": "N",
+                        "pcv": 269000,
+                        "ov": 258000,
+                        "hv": 261500,
+                        "lv": 256500,
+                        "ul": 349500,
+                        "ll": 188500,
+                        "aq": 13938673,
+                        "aa": 3605063000000,
+                        "nav": null,
+                        "keps": 6605,
+                        "eps": 22292,
+                        "bps": 86051.82511,
+                        "cnsEps": 48239,
+                        "dv": 1668.0,
+                        "countOfListedStock": 5846278608,
+                        "highPriceOf52Weeks": 374500,
+                        "lowPriceOf52Weeks": 74200,
+                        "adjustedHighPriceOf52Weeks": null,
+                        "adjustedLowPriceOf52Weeks": null,
+                        "nxtOverMarketPriceInfo": {
+                            "tradingSessionType": "AFTER_MARKET",
+                            "overMarketStatus": "CLOSE",
+                            "overPrice": "262,000",
+                            "openPrice": "260,000",
+                            "highPrice": "264,000",
+                            "lowPrice": "257,000",
+                            "compareToPreviousPrice": {
+                                "code": "5",
+                                "text": "하락",
+                                "name": "FALLING"
+                            },
+                            "compareToPreviousClosePrice": "-7,000",
+                            "fluctuationsRatio": "-2.60",
+                            "localTradedAt": "2026-09-11T20:00:00.000000+09:00",
+                            "tradeStopType": {
+                                "code": "1",
+                                "text": "운영.Trading",
+                                "name": "TRADING"
+                            },
+                            "tradableStatus": "tradable",
+                            "tradableStatusCode": "ok",
+                            "tradableStatusUpdatedAt": 1789078213.301,
+                            "accumulatedTradingVolume": "8,077,358",
+                            "accumulatedTradingValue": "2조 961억",
+                            "accumulatedTradingVolumeRaw": "8077358",
+                            "accumulatedTradingValueRaw": "2096068000000"
+                        }
+                    },
+                    {
+                        "cd": "000660",
+                        "nm": "SK하이닉스",
+                        "sv": 1853000,
+                        "nv": 1812000,
+                        "cv": 41000,
+                        "cr": 2.21,
+                        "rf": "5",
+                        "mt": "1",
+                        "ms": "CLOSE",
+                        "tyn": "N",
+                        "pcv": 1853000,
+                        "ov": 1773000,
+                        "hv": 1827000,
+                        "lv": 1768000,
+                        "ul": 2408000,
+                        "ll": 1298000,
+                        "aq": 2620493,
+                        "aa": 4689850000000,
+                        "nav": null,
+                        "keps": 62044,
+                        "eps": 224313,
+                        "bps": 370432.11885,
+                        "cnsEps": 349573,
+                        "dv": 3000.0,
+                        "countOfListedStock": 730492365,
+                        "highPriceOf52Weeks": 2987000,
+                        "lowPriceOf52Weeks": 319000,
+                        "adjustedHighPriceOf52Weeks": null,
+                        "adjustedLowPriceOf52Weeks": null,
+                        "nxtOverMarketPriceInfo": {
+                            "tradingSessionType": "AFTER_MARKET",
+                            "overMarketStatus": "CLOSE",
+                            "overPrice": "1,832,000",
+                            "openPrice": "1,800,000",
+                            "highPrice": "1,832,000",
+                            "lowPrice": "1,769,000",
+                            "compareToPreviousPrice": {
+                                "code": "5",
+                                "text": "하락",
+                                "name": "FALLING"
+                            },
+                            "compareToPreviousClosePrice": "-21,000",
+                            "fluctuationsRatio": "-1.13",
+                            "localTradedAt": "2026-09-11T20:00:00.000000+09:00",
+                            "tradeStopType": {
+                                "code": "1",
+                                "text": "운영.Trading",
+                                "name": "TRADING"
+                            },
+                            "tradableStatus": "tradable",
+                            "tradableStatusCode": "ok",
+                            "tradableStatusUpdatedAt": 1789078211.762,
+                            "accumulatedTradingVolume": "1,573,416",
+                            "accumulatedTradingValue": "2조 8,286억",
+                            "accumulatedTradingVolumeRaw": "1573416",
+                            "accumulatedTradingValueRaw": "2828621000000"
+                        }
+                    }
+                ]
+            }
+        ],
+        "time": 1789274322746
+    }
+}

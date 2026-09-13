@@ -1,0 +1,125 @@
+{
+    "query": "삼성",
+    "items": [
+        {
+            "code": "005930",
+            "name": "삼성전자",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/005930/total",
+            "reutersCode": "005930",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "009150",
+            "name": "삼성전기",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/009150/total",
+            "reutersCode": "009150",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "006400",
+            "name": "삼성SDI",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/006400/total",
+            "reutersCode": "006400",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "005935",
+            "name": "삼성전자우",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/005935/total",
+            "reutersCode": "005935",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "010140",
+            "name": "삼성중공업",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/010140/total",
+            "reutersCode": "010140",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "028050",
+            "name": "삼성E&A",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/028050/total",
+            "reutersCode": "028050",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "018260",
+            "name": "삼성에스디에스",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/018260/total",
+            "reutersCode": "018260",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "028260",
+            "name": "삼성물산",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/028260/total",
+            "reutersCode": "028260",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "207940",
+            "name": "삼성바이오로직스",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/207940/total",
+            "reutersCode": "207940",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        },
+        {
+            "code": "000810",
+            "name": "삼성화재",
+            "typeCode": "KOSPI",
+            "typeName": "코스피",
+            "url": "/domestic/stock/000810/total",
+            "reutersCode": "000810",
+            "nationCode": "KOR",
+            "nationName": "대한민국",
+            "category": "stock",
+            "hasDiscussion": true
+        }
+    ]
+}

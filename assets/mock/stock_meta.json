@@ -1,0 +1,14 @@
+{
+    "chartNationType": "domestic",
+    "chartInfoType": "item",
+    "itemCode": "005930",
+    "symbolCode": "005930",
+    "stockName": "삼성전자",
+    "stockExchangeName": "KOSPI",
+    "stockExchangeNameKor": "코스피",
+    "nationType": "KOR",
+    "stockType": "domestic",
+    "stockEndType": "stock",
+    "endUrl": "https://m.stock.naver.com/domestic/stock/005930",
+    "isDelisting": false
+}
